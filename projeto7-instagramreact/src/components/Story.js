@@ -11,15 +11,7 @@ export default function Story(){
     ]
     return (
         <div class="stories">
-        <ListaStory usuario="9gag"  imagem="assets/img/9gag.svg" />
-        <ListaStory usuario="meowed"  imagem="assets/img/meowed.svg" />
-        <ListaStory usuario="barked"  imagem="assets/img/barked.svg" />
-        <ListaStory usuario="nathanwpylestrangeplanet"  imagem="assets/img/nathanwpylestrangeplanet.svg" />
-        <ListaStory usuario="wawawicomics"  imagem="assets/img/wawawicomics.svg" />
-        <ListaStory usuario="respondeai"  imagem="assets/img/respondeai.svg" />
-        <ListaStory usuario="filomoderna"  imagem="assets/img/filomoderna.svg" />
-        <ListaStory usuario="memeriagourmet"  imagem="assets/img/memeriagourmet.svg" />
-
+         {itensStory.map((i) => <ListaStory usuario={i.usuario} imagem={i.imagem}/>)}
         <div class="setinha">
           <ion-icon name="chevron-forward-circle"></ion-icon>
         </div>
