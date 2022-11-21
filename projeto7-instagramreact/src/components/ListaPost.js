@@ -27,6 +27,14 @@ export default function ListaPost(props){
             setNovoNumeroCurtidas(novoNumeroCurtidas - .001)
     }
     }
+    function curtirPostNaFoto(){
+        if(iconeFotoCurtida == "heart-outline"){
+        setIconeFotoCurtida("heart")
+        setCorCoracao("red")
+        setNovoNumeroCurtidas(novoNumeroCurtidas + .001 )
+    } else{}
+    }
+
 
 
     return (
@@ -43,7 +51,7 @@ export default function ListaPost(props){
           </div>
 
           <div class="conteudo">
-            <img src={props.imagem} />
+            <img onClick={(() => curtirPostNaFoto())} src={props.imagem} />
           </div>
 
           <div class="fundo">
