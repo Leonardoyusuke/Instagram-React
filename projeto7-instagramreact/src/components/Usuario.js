@@ -15,13 +15,13 @@ export default function Usuario (){
     
 
     return(
-        <div class="usuario">
-      <img onClick={inserirFoto} src={!fotoPerfil ? imagemPadrao : fotoPerfil} />
+        <div data-test="user" class="usuario">
+      <img onClick={inserirFoto} data-test="profile-image" src={!fotoPerfil ? imagemPadrao : fotoPerfil} />
       <div class="texto">
-        <strong>catanacomics</strong>
+        <strong data-test="name" >catanacomics</strong>
         <span>
         {!nomeUsuario ? "Catana" : `${nomeUsuario}`}
-          <ion-icon onClick={inserirUsuario} name="pencil"></ion-icon>
+          <ion-icon data-test="edit-name" onClick={inserirUsuario} name="pencil"></ion-icon>
         </span>
       </div>
     </div>

@@ -39,7 +39,7 @@ export default function ListaPost(props){
 
     return (
         <div class="posts">
-        <div class="post">
+        <div data-test="post" class="post">
           <div class="topo">
             <div class="usuario">
               <img src={props.fotoUsuario} />
@@ -51,25 +51,25 @@ export default function ListaPost(props){
           </div>
 
           <div class="conteudo">
-            <img onClick={(() => curtirPostNaFoto())} src={props.imagem} />
+            <img onClick={(() => curtirPostNaFoto())} data-test="post-image" src={props.imagem} />
           </div>
 
           <div class="fundo">
             <div class="acoes">
               <div>
-                <ion-icon style={{color: corCoracao}} onClick={(() => curtirPost())} name={iconeFotoCurtida}></ion-icon>
+                <ion-icon style={{color: corCoracao}} data-test="like-post" onClick={(() => curtirPost())} name={iconeFotoCurtida}></ion-icon>
                 <ion-icon name="chatbubble-outline"></ion-icon>
                 <ion-icon name="paper-plane-outline"></ion-icon>
               </div>
               <div>
-                <ion-icon onClick={(() => salvarPost())} name={nomeIconeSalvar}></ion-icon>
+                <ion-icon onClick={(() => salvarPost())} data-test="save-post" name={nomeIconeSalvar}></ion-icon>
               </div>
             </div>
 
             <div class="curtidas">
               <img src={props.imgCurtidas} />
               <div class="texto">
-                Curtido por <strong>{props.usuarioCurtidas}</strong> e <strong>outras {novoNumeroCurtidas } pessoas</strong>
+                Curtido por <strong>{props.usuarioCurtidas}</strong> e <strong data-test="likes-number" >outras {novoNumeroCurtidas } pessoas</strong>
               </div>
             </div>
           </div>
